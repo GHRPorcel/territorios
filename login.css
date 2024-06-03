@@ -1,9 +1,20 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -16,11 +27,13 @@ body {
     padding: 50px;
     width: 350px;
     text-align: center;
-    transition: 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .toggle {
@@ -58,7 +71,6 @@ body {
     display: block;
 }
 
-
 label {
     display: block;
     margin-bottom: 8px;
@@ -73,7 +85,7 @@ input {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    transition: 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus {
@@ -88,7 +100,7 @@ button[type="submit"] {
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     font-size: 18px;
     font-weight: 600;
 }
@@ -100,11 +112,52 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: translateY(2px);
 }
+
 .card h2 {
     position: absolute;
     top: 20px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    font-size: 24px; /* Tamanho da fonte do h2 */
+    font-size: 24px;
+}
+
+/* Novo estilo para texto e botão */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    animation: fadeIn 1s ease-in-out 1s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    animation: fadeIn 1s ease-in-out 1.5s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
