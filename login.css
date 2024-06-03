@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    width: 350px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.toggle button {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.toggle button.active {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.form-container form {
+    display: none;
+}
+
+.form-container form.active {
+    display: block;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:active {
+    transform: translateY(2px);
+}
+.card h2 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 24px; /* Tamanho da fonte do h2 */
+}
